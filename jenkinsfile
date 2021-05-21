@@ -3,7 +3,7 @@ pipeline {
         label 'rat'
     }
     triggers {
-        cron('H * * * 1-5')
+        cron('59 23 * * *')
         pollSCM('* * * * *')
     }
     parameters {
@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('scm') {
             steps{
-                git 'https://github.com/wakaleo/game-of-life.git'
+                git 'https://github.com/Reddy-hub-sudo/dummy-gol.git'
             }
         }
         stage('build') {

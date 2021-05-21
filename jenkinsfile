@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('scm') {
             steps{
-                git 'https://github.com/Reddy-hub-sudo/dummy-gol.git'
+                git branch: 'developer', url: 'https://github.com/Reddy-hub-sudo/dummy-gol.git'
             }
         }
         stage('build') {
